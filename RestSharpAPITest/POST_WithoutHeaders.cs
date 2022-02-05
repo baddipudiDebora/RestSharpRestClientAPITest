@@ -17,7 +17,7 @@ namespace RestSharpAPITest
         {
             l.lat = 89.78f;
             l.lng = -98.67f;
-            new Rootobject() { location = { lat = l.lat, lng = l.lng }, accuracy = 50, name = "Frontline house 456", Address = "77, side layout, cohen 09", Types = new string[] { "shoe park", "shop" }, Website = "http://google.com", Language = "French-IN" };
+            new Rootobject() { location = { lat = l.lat, lng = l.lng }, accuracy = 50, name = "Frontline house 456", phone_number= "(+91) 983 893 3937", Address = "77, side layout, cohen 09", Types = new string[] { "shoe park","shop" }, Website = "http://google.com", Language = "French-IN" };
             return new Rootobject();
         }
         [Test]
@@ -26,9 +26,7 @@ namespace RestSharpAPITest
             var client = new RestClient("https://rahulshettyacademy.com/maps/api/place/add/json");
             var request = new RestRequest("?key= qaclick123", Method.POST);
             request.RequestFormat = DataFormat.Json;
-     
             request.AddBody(ro());
-
             var response = client.Execute(request);
             var deserialize = new JsonDeserializer();
             var JSONObj = deserialize.Deserialize<Dictionary<string, string>>(response);

@@ -12,7 +12,7 @@ namespace RestSharpAPITest.Model
         public Location location { get; set; }
         public int accuracy { get; set; }
         public string name { get; set; }
-        public string Phone_number { get; set; }
+        public string phone_number { get; set; }
         public string Address { get; set; }
         public string[] Types { get; set; }
         public string Website { get; set; }

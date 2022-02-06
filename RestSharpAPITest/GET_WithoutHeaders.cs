@@ -22,7 +22,7 @@ namespace RestSharpAPITest
             var deserialize = new JsonDeserializer();
             var JSONObj = deserialize.Deserialize<Dictionary<string, string>>(response);
             Console.WriteLine(JSONObj["Writer"]);
-            Assert.That(JSONObj["Writer"]== "Eric Roth, Bradley Cooper, Will Fetters");
+            Assert.That(JSONObj["Writer"] == "Eric Roth, Bradley Cooper, Will Fetters");
         }
     }
 }

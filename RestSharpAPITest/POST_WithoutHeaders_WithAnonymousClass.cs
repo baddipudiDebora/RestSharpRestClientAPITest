@@ -11,7 +11,8 @@ using System.Threading.Tasks;
 
 namespace RestSharpAPITest
 {
-    internal class POST_WithoutHeaders_WithAnonymousClass {
+    internal class POST_WithoutHeaders_WithAnonymousClass
+    {
         [Test]
         public void Test1()
         {
@@ -41,7 +42,7 @@ namespace RestSharpAPITest
             var deserialize = new JsonDeserializer();
             var JSONObj = deserialize.Deserialize<Dictionary<string, string>>(response);
             Console.WriteLine(JSONObj.ToString());
-         
+
 
 
         }
